@@ -1,3 +1,31 @@
+Black Standard Edition
+======================
+
+This package is a custom Symfony2 edition for black projects.
+
+1) Bundles
+----------
+
+ - [**JMSDiExtraBundle**][14]: JMSDiExtraBundle adds more powerful dependency injection features to Symfony2
+ - [**JMSSecurityExtraBundle**][15]: This bundle enhances the Symfony2 Security Component by adding several new features.
+ - [**DoctrineMongoDBBundle**][16]: Doctrine MongoDB support.
+ - [**StofDoctrineExtensionsBundle**][17]: Provides integration for DoctrineExtensions for your Symfony2 Project.
+ - [**SonataIntlBundle**][18] : PHP Internationalization integration (intl extension)
+ - [**StfalconTinymceBundle**][19]: TinyMCE for Symfony2
+ - [**FMElfinderBundle**][20]: ElFinder for Symfony2
+ - [**IvoryOrderedFormBundle**][21]: Allow to order your Symfony2 form fields by adding the position option.
+
+2) Parameters
+-------------
+
+For better configuration, we have added some parameters for MongoDB, Monolog and default delivery email configuration in your `parameters.yml.dist`.
+
+3) Testing Tools
+----------------
+
+[**Behat**][22], [**Mink**][23] and [**phpspec**][24] will be your BFF.
+
+
 Symfony Standard Edition
 ========================
 
@@ -169,3 +197,14 @@ Enjoy!
 [11]: http://symfony.com/doc/2.4/cookbook/logging/monolog.html
 [12]: http://symfony.com/doc/2.4/cookbook/assetic/asset_management.html
 [13]: http://symfony.com/doc/2.4/bundles/SensioGeneratorBundle/index.html
+[14]: http://jmsyst.com/bundles/JMSDiExtraBundle
+[15]: http://jmsyst.com/bundles/JMSSecurityExtraBundle
+[16]: http://docs.doctrine-project.org/projects/doctrine-mongodb-odm/en/latest/
+[17]: https://github.com/stof/StofDoctrineExtensionsBundle
+[18]: http://sonata-project.org/bundles/intl/master/doc/index.html
+[19]: https://github.com/stfalcon/TinymceBundle
+[20]: https://github.com/helios-ag/FMElfinderBundle
+[21]: https://github.com/egeloen/IvoryOrderedFormBundle
+[22]: http://behat.org/
+[23]: http://mink.behat.org/
+[24]: http://phpspec.net/

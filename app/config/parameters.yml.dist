@@ -1,18 +1,23 @@
 parameters:
-    database_driver:   pdo_mysql
-    database_host:     127.0.0.1
-    database_port:     ~
-    database_name:     symfony
-    database_user:     root
-    database_password: ~
+    database_driver:    pdo_mysql
+    database_host:      ~
+    database_port:      ~
+    database_name:      ~
+    database_user:      ~
+    database_password:  ~
 
-    mailer_transport:  smtp
-    mailer_host:       127.0.0.1
-    mailer_user:       ~
-    mailer_password:   ~
+    mailer_transport:   mail
+    mailer_host:        127.0.0.1
+    mailer_user:        ~
+    mailer_password:    ~
 
-    locale:            en
-    secret:            ThisTokenIsNotSoSecretChangeIt
+    locale:             en
+    secret:             ThisAintAnotherSecretTokenChangeIt
+
+    delivery_email:     ~
+    monolog_from_email: ~
+    monolog_to_email:   ~
+    monolog_subject:    ~
 
     mongo_host:         ~
     mongo_port:         27017
