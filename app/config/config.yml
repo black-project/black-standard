@@ -3,8 +3,8 @@ imports:
     - { resource: security.yml }
 
 framework:
-    #esi:             ~
-    #translator:      { fallback: "%locale%" }
+    esi:             { enabled: true }
+    translator:      { fallback: "%locale%" }
     secret:          "%secret%"
     router:
         resource: "%kernel.root_dir%/config/routing.yml"
@@ -33,14 +33,20 @@ twig:
 assetic:
     debug:          "%kernel.debug%"
     use_controller: false
-    bundles:        [ ]
+    bundles:
+        - 'FMElfinderBundle'
     #java: /usr/bin/java
     filters:
         cssrewrite: ~
+        less:
+            node:       /opt/node/bin/node
+            node_paths: [ /opt/node/bin/node, /opt/node/lib/node_modules ]
         #closure:
         #    jar: "%kernel.root_dir%/Resources/java/compiler.jar"
-        #yui_css:
-        #    jar: "%kernel.root_dir%/Resources/java/yuicompressor-2.4.7.jar"
+        yui_css:
+            jar: "%kernel.root_dir%/Resources/java/yuicompressor-2.4.7.jar"
+        yui_js:
+            jar: "%kernel.root_dir%/Resources/java/yuicompressor-2.4.7.jar"
 
 # Doctrine Configuration
 doctrine:
@@ -60,10 +66,99 @@ doctrine:
         auto_generate_proxy_classes: "%kernel.debug%"
         auto_mapping: true
 
+doctrine_mongodb:
+    auto_generate_hydrator_classes: true
+    connections:
+        default:
+            server: mongodb://%mongo_host%:%mongo_port%
+            options:
+                connect: true
+    default_database: %mongo_name%
+    document_managers:
+        default:
+            auto_mapping: true
+            mappings:
+                gedmo_translatable:
+                    type: annotation
+                    prefix: Gedmo\Translatable\Document
+                    dir: "%kernel.root_dir%/../vendor/gedmo/doctrine-extensions/lib/Gedmo/Translatable/Document"
+                    alias: GedmoTranslatable # this one is optional and will default to the name set for the mapping
+                gedmo_translator:
+                    type: annotation
+                    prefix: Gedmo\Translator\Document
+                    dir: "%kernel.root_dir%/../vendor/gedmo/doctrine-extensions/lib/Gedmo/Translator/Document"
+                    alias: GedmoTranslator # this one is optional and will default to the name set for the mapping
+                gedmo_loggable:
+                    type: annotation
+                    prefix: Gedmo\Loggable\Document
+                    dir: "%kernel.root_dir%/../vendor/gedmo/doctrine-extensions/lib/Gedmo/Loggable/Document"
+                    alias: GedmoLoggable # this one is optional and will default to the name set for the mapping
+                gedmo_tree:
+                    type: annotation
+                    prefix: Gedmo\Tree\Document
+                    dir: "%kernel.root_dir%/../vendor/gedmo/doctrine-extensions/lib/Gedmo/Tree/Document"
+                    alias: GedmoTree # this one is optional and will default to the name set for the mapping
+
 # Swiftmailer Configuration
 swiftmailer:
-    transport: "%mailer_transport%"
-    host:      "%mailer_host%"
-    username:  "%mailer_user%"
-    password:  "%mailer_password%"
+    transport: %mailer_transport%
+    host:      %mailer_host%
+    username:  %mailer_user%
+    password:  %mailer_password%
     spool:     { type: memory }
+
+jms_security_extra:
+    secure_all_services: true
+    expressions: true
+
+stof_doctrine_extensions:
+    default_locale: fr_FR
+    orm:
+        default:
+            timestampable: true
+            sluggable: true
+            tree: true
+    mongodb:
+        default:
+            timestampable: true
+            sluggable: true
+            tree: true
+
+services:
+    twig.extension.text:
+       class: Twig_Extensions_Extension_Text
+       tags:
+            - { name: twig.extension }
+
+stfalcon_tinymce:
+    tinymce_jquery: true
+    language: %locale%
+    selector: ".tinymce"
+    theme:
+        simple:
+            file_browser_callback : elFinderBrowser
+        advanced:
+            file_browser_callback : elFinderBrowser
+            plugins:
+                - "advlist autolink lists link image charmap print preview hr anchor pagebreak"
+                - "searchreplace wordcount visualblocks visualchars code fullscreen"
+                - "insertdatetime media nonbreaking save table contextmenu directionality"
+                - "template paste textcolor"
+            toolbar1: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
+            toolbar2: "print preview media | forecolor backcolor"
+            convert_urls: false
+            extended_valid_elements: "i[class],b,span[class],@[class]"
+            valid_elements : '*[*]'
+            verify_html: false
+
+fm_elfinder:
+    editor: tinymce4
+    locale: %locale%
+    connector:
+        debug: false
+        roots:
+            uploads:
+                driver: LocalFileSystem
+                path: uploads
+                upload_allow: ['all']
+                upload_max_size: 20M

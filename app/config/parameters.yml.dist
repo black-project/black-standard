@@ -13,3 +13,7 @@ parameters:
 
     locale:            en
     secret:            ThisTokenIsNotSoSecretChangeIt
+
+    mongo_host:         ~
+    mongo_port:         27017
+    mongo_name:         ~
