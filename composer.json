@@ -23,7 +23,7 @@
         "doctrine/mongodb-odm": "1.0.*@dev",
         "doctrine/mongodb-odm-bundle": "3.0.*@dev",
         "stof/doctrine-extensions-bundle": "~1.1@dev",
-        "sonata-project/intl-bundle": "dev-master",
+        "sonata-project/intl-bundle": "2.1.*",
         "stfalcon/tinymce-bundle": "dev-master",
         "helios-ag/fm-elfinder-bundle": "dev-master",
         "egeloen/ordered-form-bundle": "@dev"
