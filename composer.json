@@ -35,9 +35,7 @@
         "behat/mink-extension": "*",
         "behat/mink-browserkit-driver": "*",
         "phpspec/phpspec": "2.0.*@dev",
-        "phpunit/phpunit": "4.0.5",
-        "zerkalica/phpcs": "dev-master",
-        "phpmd/phpmd": "1.5.0"
+        "phpunit/phpunit": "4.0.5"
     },
     "scripts": {
         "post-install-cmd": [
