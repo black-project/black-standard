@@ -6,6 +6,12 @@
     "autoload": {
         "psr-0": { "": "src/" }
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "/Users/pocky/Sites/_Black/DDD/vagrant"
+        }
+    ],
     "require": {
         "php": ">=5.3.3",
         "symfony/symfony": "~2.4",
@@ -25,8 +31,7 @@
         "stof/doctrine-extensions-bundle": "~1.1@dev",
         "sonata-project/intl-bundle": "2.1.*",
         "stfalcon/tinymce-bundle": "dev-master",
-        "helios-ag/fm-elfinder-bundle": "dev-master",
-        "egeloen/ordered-form-bundle": "@dev"
+        "helios-ag/fm-elfinder-bundle": "dev-master"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3",
