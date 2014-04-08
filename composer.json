@@ -6,12 +6,6 @@
     "autoload": {
         "psr-0": { "": "src/" }
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "/Users/pocky/Sites/_Black/DDD/vagrant"
-        }
-    ],
     "require": {
         "php": ">=5.3.3",
         "symfony/symfony": "~2.4",
