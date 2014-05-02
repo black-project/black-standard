@@ -18,6 +18,12 @@ Black Standard Edition
 ========================
 
 Welcome to the Black Standard Edition - a fully-functional Symfony2
+=======
+Symfony Standard Edition
+========================
+
+Welcome to the Symfony Standard Edition - a fully-functional Symfony2
+>>>>>>> upstream/2.4
 application that you can use as the skeleton for your new applications.
 
 This document contains information on how to download, install, and start
@@ -49,7 +55,7 @@ Composer will install Symfony and all its dependencies under the
 
 ### Download an Archive File
 
-To quickly test Symfony, you can also download an [archive][3] of the Black Standard
+To quickly test Symfony, you can also download an [archive][3] of the Standard
 Edition and unpack it somewhere under your web server root directory.
 
 If you downloaded an archive "without vendors", you also need to install all
@@ -77,9 +83,8 @@ Access the `config.php` script from a browser:
 
 If you get any warnings or recommendations, fix them before moving on.
 
-
 3) Getting started with Symfony
--------------------------------
+===============================
 
 This distribution is meant to be the starting point for your Symfony
 applications, but it also contains some sample code that you can learn from
@@ -137,7 +142,6 @@ It comes pre-configured with the following bundles:
 
   * **AcmeDemoBundle** (in dev/test env) - A demo bundle with some example
     code
-
 
   * [**JMSDiExtraBundle**][14]: JMSDiExtraBundle adds more powerful dependency injection features to Symfony2
 
