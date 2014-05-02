@@ -1,5 +1,5 @@
 {
-    "name": "black/black-standard-edition",
+    "name": "black-project/black-standard-edition",
     "license": "MIT",
     "type": "project",
     "description": "The \"Black Edition\" distribution build on top of \"Symfony Standard Edition\"",
