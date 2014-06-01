@@ -1,26 +1,14 @@
 security:
-    encoders:
-        Symfony\Component\Security\Core\User\User: plaintext
-
-    role_hierarchy:
-        ROLE_ADMIN:       ROLE_USER
-        ROLE_SUPER_ADMIN: [ROLE_USER, ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
-
     providers:
         in_memory:
-            memory:
-                users:
-                    admin: { password: adminpass, roles: [ 'ROLE_SUPER_ADMIN' ] }
+            memory: ~
 
     firewalls:
         dev:
-            pattern:  ^/(_(profiler|wdt)|css|images|js)/
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
 
-        login:
-            security: false
-
-        secured_area:
+        default:
             anonymous: ~
 
     access_control:
