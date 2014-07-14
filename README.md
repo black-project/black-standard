@@ -13,6 +13,11 @@ For better configuration, we have added some parameters for MongoDB, Monolog and
 
 [**Behat**][22], [**Mink**][23] and [**phpspec**][24] will be your BFF.
 
+3) OH WAIT
+----------
+
+We use Symfony 3.0 directory structure since v2.5.1. See [What is the new Symfony 3 directory structure?][25] for more details.
+
 
 Black Standard Edition
 ========================
@@ -187,3 +192,4 @@ Enjoy!
 [22]: http://behat.org/
 [23]: http://mink.behat.org/
 [24]: http://phpspec.net/
+[25]: http://stackoverflow.com/questions/23993295/what-is-the-new-symfony-3-directory-structure
