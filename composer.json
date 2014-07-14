@@ -35,9 +35,6 @@
         "behat/mink-browserkit-driver": "*",
         "phpspec/phpspec": "2.0.*@dev"
     },
-    "require-dev": {
-        "sensio/generator-bundle": "~2.3"
-    },
     "scripts": {
         "post-root-package-install": [
             "SymfonyStandard\\Composer::hookRootPackageInstall"
