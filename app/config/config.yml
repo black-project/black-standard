@@ -178,13 +178,15 @@ stfalcon_tinymce:
             verify_html: false
 
 fm_elfinder:
-    editor: tinymce4
-    locale: %locale%
-    connector:
-        debug: false
-        roots:
-            uploads:
-                driver: LocalFileSystem
-                path: uploads
-                upload_allow: ['all']
-                upload_max_size: 20M
+    instances:
+        default:
+          editor: tinymce4
+          locale: %locale%
+          connector:
+              debug: false
+              roots:
+                  uploads:
+                      driver: LocalFileSystem
+                      path: uploads
+                      upload_allow: ['all']
+                      upload_max_size: 20M
