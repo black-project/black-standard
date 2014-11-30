@@ -405,7 +405,8 @@ class SymfonyRequirements extends RequirementCollection
         $this->addRequirement(
             is_dir(__DIR__.'/../vendor/composer'),
             'Vendor libraries must be installed',
-            'Vendor libraries are missing. Install composer following instructions from <a href="http://getcomposer.org/">http://getcomposer.org/</a>. '.                'Then run "<strong>php composer.phar install</strong>" to install them.'
+            'Vendor libraries are missing. Install composer following instructions from <a href="http://getcomposer.org/">http://getcomposer.org/</a>. '.
+                'Then run "<strong>php composer.phar install</strong>" to install them.'
         );
 
         $cacheDir = is_dir(__DIR__.'/../var/cache') ? __DIR__.'/../var/cache' : __DIR__.'/cache';
@@ -439,8 +440,8 @@ class SymfonyRequirements extends RequirementCollection
             }
 
             $this->addRequirement(
-                isset($timezones[date_default_timezone_get()]),
-                sprintf('Configured default timezone "%s" must be supported by your installation of PHP', date_default_timezone_get()),
+                isset($timezones[@date_default_timezone_get()]),
+                sprintf('Configured default timezone "%s" must be supported by your installation of PHP', @date_default_timezone_get()),
                 'Your default timezone is not supported by PHP. Check for typos in your <strong>php.ini</strong> file and have a look at the list of deprecated timezones at <a href="http://php.net/manual/en/timezones.others.php">http://php.net/manual/en/timezones.others.php</a>.'
             );
         }
@@ -529,6 +530,16 @@ class SymfonyRequirements extends RequirementCollection
             'Install the <strong>PCRE</strong> extension (version 8.0+).'
         );
 
+        if (extension_loaded('mbstring')) {
+            $this->addPhpIniRequirement(
+                'mbstring.func_overload',
+                create_function('$cfgValue', 'return (int) $cfgValue === 0;'),
+                true,
+                'string functions should not be overloaded',
+                'Set "<strong>mbstring.func_overload</strong>" to <strong>0</strong> in php.ini<a href="#phpini">*</a> to disable function overloading by the mbstring extension.'
+            );
+        }
+
         /* optional recommendations follow */
 
         $this->addRecommendation(
@@ -601,6 +612,12 @@ class SymfonyRequirements extends RequirementCollection
             'Install and enable the <strong>XML</strong> extension.'
         );
 
+        $this->addRecommendation(
+            function_exists('filter_var'),
+            'filter_var() should be available',
+            'Install and enable the <strong>filter</strong> extension.'
+        );
+
         if (!defined('PHP_WINDOWS_VERSION_BUILD')) {
             $this->addRecommendation(
                 function_exists('posix_isatty'),
@@ -661,7 +678,7 @@ class SymfonyRequirements extends RequirementCollection
         $this->addRecommendation(
             $accelerator,
             'a PHP accelerator should be installed',
-            'Install and enable a <strong>PHP accelerator</strong> like APC (highly recommended).'
+            'Install and/or enable a <strong>PHP accelerator</strong> (highly recommended).'
         );
 
         if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
