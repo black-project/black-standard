@@ -30,75 +30,8 @@ Official README - Symfony Standard Edition
 Welcome to the Symfony Standard Edition - a fully-functional Symfony2
 application that you can use as the skeleton for your new applications.
 
-This document contains information on how to download, install, and start
-using Symfony. For a more detailed explanation, see the [Installation][1]
-chapter of the Symfony Documentation.
-
-1) Installing the Standard Edition
-----------------------------------
-
-When it comes to installing the Black Standard Edition, you have the
-following options.
-
-### Use Composer (*recommended*)
-
-As Symfony uses [Composer][2] to manage its dependencies, the recommended way
-to create a new project is to use it.
-
-If you don't have Composer yet, download it following the instructions on
-http://getcomposer.org/ or just run the following command:
-
-    curl -s http://getcomposer.org/installer | php
-
-Then, use the `create-project` command to generate a new Symfony application:
-
-    php composer.phar create-project black-project/black-standard-edition path/to/install
-
-Composer will install Symfony and all its dependencies under the
-`path/to/install` directory.
-
-### Download an Archive File
-
-To quickly test Symfony, you can also download an [archive][3] of the Standard
-Edition and unpack it somewhere under your web server root directory.
-
-If you downloaded an archive "without vendors", you also need to install all
-the necessary dependencies. Download composer (see above) and run the
-following command:
-
-    php composer.phar install
-
-2) Checking your System Configuration
--------------------------------------
-
-Before starting coding, make sure that your local system is properly
-configured for Symfony.
-
-Execute the `check.php` script from the command line:
-
-    php app/check.php
-
-The script returns a status code of `0` if all mandatory requirements are met,
-`1` otherwise.
-
-Access the `config.php` script from a browser:
-
-    http://localhost/path-to-project/web/config.php
-
-If you get any warnings or recommendations, fix them before moving on.
-
-3) Getting started with Symfony
-===============================
-
-This distribution is meant to be the starting point for your Symfony
-applications, but it also contains some sample code that you can learn from
-and play with.
-
-A great way to start learning Symfony is via the [Quick Tour][4], which will
-take you through all the basic features of Symfony2.
-
-Once you're feeling good, you can move onto reading the official
-[Symfony2 book][5].
+For details on how to download and get started with Symfony, see the
+[Installation][1] chapter of the Symfony Documentation.
 
 What's inside?
 ---------------
@@ -109,9 +42,9 @@ The Symfony Standard Edition is configured with the following defaults:
 
   * Doctrine ORM/DBAL is configured;
 
-  * Swiftmailer is configured;
+  * Swiftmailer;
 
-  * Annotations for everything are enabled.
+  * Annotations enabled for everything.
 
 It comes pre-configured with the following bundles:
 
@@ -168,19 +101,15 @@ released under the MIT or BSD license.
 
 Enjoy!
 
-[1]:  http://symfony.com/doc/2.6/book/installation.html
-[2]:  http://getcomposer.org/
-[3]:  https://github.com/black-project/black-standard/archive/master.zip
-[4]:  http://symfony.com/doc/2.6/quick_tour/the_big_picture.html
-[5]:  http://symfony.com/doc/2.6/index.html
-[6]:  http://symfony.com/doc/2.6/bundles/SensioFrameworkExtraBundle/index.html
-[7]:  http://symfony.com/doc/2.6/book/doctrine.html
-[8]:  http://symfony.com/doc/2.6/book/templating.html
-[9]:  http://symfony.com/doc/2.6/book/security.html
-[10]: http://symfony.com/doc/2.6/cookbook/email.html
-[11]: http://symfony.com/doc/2.6/cookbook/logging/monolog.html
-[12]: http://symfony.com/doc/2.6/cookbook/assetic/asset_management.html
-[13]: http://symfony.com/doc/2.6/bundles/SensioGeneratorBundle/index.html
+[1]:  http://symfony.com/doc/current/book/installation.html
+[6]:  http://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/index.html
+[7]:  http://symfony.com/doc/current/book/doctrine.html
+[8]:  http://symfony.com/doc/current/book/templating.html
+[9]:  http://symfony.com/doc/current/book/security.html
+[10]: http://symfony.com/doc/current/cookbook/email.html
+[11]: http://symfony.com/doc/current/cookbook/logging/monolog.html
+[12]: http://symfony.com/doc/current/cookbook/assetic/asset_management.html
+[13]: http://symfony.com/doc/current/bundles/SensioGeneratorBundle/index.html
 [14]: http://jmsyst.com/bundles/JMSDiExtraBundle
 [15]: http://jmsyst.com/bundles/JMSSecurityExtraBundle
 [16]: http://docs.doctrine-project.org/projects/doctrine-mongodb-odm/en/latest/
