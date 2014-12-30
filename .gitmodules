@@ -1,3 +1,0 @@
-[submodule "black-packer"]
-  path = vm
-  url  = git@github.com:black-project/black-packer.git
