@@ -25,7 +25,8 @@
         "stof/doctrine-extensions-bundle": "~1.1@dev",
         "sonata-project/intl-bundle": "2.1.*",
         "stfalcon/tinymce-bundle": "dev-master",
-        "helios-ag/fm-elfinder-bundle": "dev-master"
+        "helios-ag/fm-elfinder-bundle": "dev-master",
+        "roave/security-advisories": "dev-master"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3",
