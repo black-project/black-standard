@@ -1,0 +1,3 @@
+extensions:
+  - Memio\SpecGen\MemioSpecGenExtension
+  - PhpSpec\Extension\CodeCoverageExtension

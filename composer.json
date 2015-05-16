@@ -21,7 +21,7 @@
         "sensio/framework-extra-bundle": "~3.0,>=3.0.2",
         "incenteev/composer-parameter-handler": "~2.0",
         "jms/security-extra-bundle": "~1.5",
-        "jms/di-extra-bundle": "1.5.*",
+        "jms/di-extra-bundle": "~1.5",
         "doctrine/mongodb-odm": "1.0.*@dev",
         "doctrine/mongodb-odm-bundle": "3.0.*@dev",
         "stof/doctrine-extensions-bundle": "~1.1@dev",
@@ -37,7 +37,8 @@
         "behat/symfony2-extension": "*",
         "behat/mink-extension": "*",
         "behat/mink-browserkit-driver": "*",
-        "phpspec/phpspec": "~2.1",
+        "phpspec/phpspec": "~2.2",
+        "memio/spec-gen": "~0.1",
         "henrikbjorn/phpspec-code-coverage": "~0.2",
         "phpunit/phpunit": "4.0.*"
     },
