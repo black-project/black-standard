@@ -4,7 +4,7 @@
     "type": "project",
     "description": "The \"Black Edition\" distribution build on top of \"Symfony Standard Edition\"",
     "autoload": {
-        "psr-4": { "": "src/", "SymfonyStandard\\": "app/" }
+        "psr-4": { "": "src/" }
     },
     "require": {
         "php": ">=5.5",
