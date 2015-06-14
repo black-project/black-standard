@@ -27,6 +27,7 @@
         "sonata-project/intl-bundle": "2.1.*",
         "stfalcon/tinymce-bundle": "0.3.*",
         "helios-ag/fm-elfinder-bundle": "3.*",
+        "twig/extensions": "~1.2",
         "roave/security-advisories": "dev-master"
     },
     "require-dev": {
