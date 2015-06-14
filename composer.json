@@ -4,16 +4,15 @@
     "type": "project",
     "description": "The \"Black Edition\" distribution build on top of \"Symfony Standard Edition\"",
     "autoload": {
-        "psr-0": { "": "src/", "SymfonyStandard": "app/" }
+        "psr-4": { "": "src/" }
     },
     "require": {
         "php": ">=5.5",
-        "symfony/symfony": "2.6.*",
+        "symfony/symfony": "2.7.*",
         "doctrine/orm": "2.5.*@dev",
         "doctrine/common": "2.5.*@dev",
         "doctrine/dbal": "2.5.*",
-        "doctrine/doctrine-bundle": "~1.3",
-        "twig/extensions": "~1.0",
+        "doctrine/doctrine-bundle": "~1.4",
         "symfony/assetic-bundle": "~2.3",
         "symfony/swiftmailer-bundle": "~2.3",
         "symfony/monolog-bundle": "~2.4",
@@ -28,6 +27,7 @@
         "sonata-project/intl-bundle": "2.1.*",
         "stfalcon/tinymce-bundle": "0.3.*",
         "helios-ag/fm-elfinder-bundle": "3.*",
+        "twig/extensions": "~1.2",
         "roave/security-advisories": "dev-master"
     },
     "require-dev": {
@@ -40,7 +40,7 @@
         "phpspec/phpspec": "~2.2",
         "memio/spec-gen": "~0.1",
         "henrikbjorn/phpspec-code-coverage": "~0.2",
-        "phpunit/phpunit": "4.0.*"
+        "phpunit/phpunit": "~4.7"
     },
     "scripts": {
         "post-install-cmd": [
@@ -49,7 +49,8 @@
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::removeSymfonyStandardFiles"
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::removeSymfonyStandardFiles",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget"
         ],
         "post-update-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
@@ -57,7 +58,8 @@
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::removeSymfonyStandardFiles"
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::removeSymfonyStandardFiles",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget"
         ]
     },
     "config": {
@@ -73,7 +75,7 @@
             "file": "app/config/parameters.yml"
         },
         "branch-alias": {
-            "dev-master": "2.6-dev"
+            "dev-master": "2.7-dev"
         }
     }
 }

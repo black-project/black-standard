@@ -3,6 +3,11 @@ imports:
     - { resource: security.yml }
     - { resource: services.yml }
 
+# Put parameters here that don't need to change on each machine where the app is deployed
+# http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
+parameters:
+    locale: en
+
 framework:
     esi:             { enabled: true }
     translator:      { fallback: ["%locale%"] }
@@ -13,6 +18,7 @@ framework:
     form:            ~
     csrf_protection: ~
     validation:      { enable_annotations: true }
+    #serializer:      { enable_annotations: true }
     templating:
         engines: ['twig']
         #assets_version: SomeVersionScheme
@@ -54,7 +60,7 @@ assetic:
 # Doctrine Configuration
 doctrine:
     dbal:
-        driver:   "%database_driver%"
+        driver:   pdo_mysql
         host:     "%database_host%"
         port:     "%database_port%"
         dbname:   "%database_name%"
@@ -70,33 +76,29 @@ doctrine:
 
     orm:
         auto_generate_proxy_classes: "%kernel.debug%"
-        entity_managers:
-            default:
-                auto_mapping: true
-                mappings:
-                    gedmo_translatable:
-                        type: annotation
-                        prefix: Gedmo\Translatable\Entity
-                        dir: "%kernel.root_dir%/../vendor/gedmo/doctrine-extensions/lib/Gedmo/Translatable/Entity"
-                        alias: GedmoTranslatable # this one is optional and will default to the name set for the mapping
-                        is_bundle: false
-                    gedmo_translator:
-                        type: annotation
-                        prefix: Gedmo\Translator\Entity
-                        dir: "%kernel.root_dir%/../vendor/gedmo/doctrine-extensions/lib/Gedmo/Translator/Entity"
-                        alias: GedmoTranslator # this one is optional and will default to the name set for the mapping
-                        is_bundle: false
-                    gedmo_loggable:
-                        type: annotation
-                        prefix: Gedmo\Loggable\Entity
-                        dir: "%kernel.root_dir%/../vendor/gedmo/doctrine-extensions/lib/Gedmo/Loggable/Entity"
-                        alias: GedmoLoggable # this one is optional and will default to the name set for the mapping
-                        is_bundle: false
-                    gedmo_tree:
-                        type: annotation
-                        prefix: Gedmo\Tree\Entity
-                        dir: "%kernel.root_dir%/../vendor/gedmo/doctrine-extensions/lib/Gedmo/Tree/Entity"
-                        alias: GedmoTree # this one is optional and will default to the name set for the mapping
+        naming_strategy: doctrine.orm.naming_strategy.underscore
+        auto_mapping: true
+        mappings:
+            translatable:
+                type: annotation
+                prefix: Gedmo\Translatable\Entity
+                dir: "%kernel.root_dir%/../vendor/gedmo/doctrine-extensions/lib/Gedmo/Translatable/Entity"
+                alias: Gedmo # this one is optional and will default to the name set for the mapping
+            translator:
+                type: annotation
+                prefix: Gedmo\Translator\Entity
+                dir: "%kernel.root_dir%/../vendor/gedmo/doctrine-extensions/lib/Gedmo/Translator/Entity"
+                alias: Gedmo # this one is optional and will default to the name set for the mapping
+            loggable:
+                type: annotation
+                prefix: Gedmo\Loggable\Entity
+                dir: "%kernel.root_dir%/../vendor/gedmo/doctrine-extensions/lib/Gedmo/Loggable/Entity"
+                alias: Gedmo # this one is optional and will default to the name set for the mapping
+            tree:
+                type: annotation
+                prefix: Gedmo\Tree\Entity
+                dir: "%kernel.root_dir%/../vendor/gedmo/doctrine-extensions/lib/Gedmo/Tree/Entity"
+                alias: Gedmo # this one is optional and will default to the name set for the mapping
 
 doctrine_mongodb:
     auto_generate_hydrator_classes: true
@@ -110,22 +112,22 @@ doctrine_mongodb:
         default:
             auto_mapping: true
             mappings:
-                gedmo_translatable:
+                translatable:
                     type: annotation
                     prefix: Gedmo\Translatable\Document
                     dir: "%kernel.root_dir%/../vendor/gedmo/doctrine-extensions/lib/Gedmo/Translatable/Document"
-                    alias: GedmoTranslatable # this one is optional and will default to the name set for the mapping
-                gedmo_translator:
+                    alias: GedmoDocument # this one is optional and will default to the name set for the mapping
+                translator:
                     type: annotation
                     prefix: Gedmo\Translator\Document
                     dir: "%kernel.root_dir%/../vendor/gedmo/doctrine-extensions/lib/Gedmo/Translator/Document"
-                    alias: GedmoTranslator # this one is optional and will default to the name set for the mapping
-                gedmo_loggable:
+                    alias: GedmoDocument # this one is optional and will default to the name set for the mapping
+                loggable:
                     type: annotation
                     prefix: Gedmo\Loggable\Document
                     dir: "%kernel.root_dir%/../vendor/gedmo/doctrine-extensions/lib/Gedmo/Loggable/Document"
                     alias: GedmoLoggable # this one is optional and will default to the name set for the mapping
-                gedmo_tree:
+                tree:
                     type: annotation
                     prefix: Gedmo\Tree\Document
                     dir: "%kernel.root_dir%/../vendor/gedmo/doctrine-extensions/lib/Gedmo/Tree/Document"
