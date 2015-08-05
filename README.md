@@ -101,15 +101,15 @@ released under the MIT or BSD license.
 
 Enjoy!
 
-[1]:  http://symfony.com/doc/current/book/installation.html
-[6]:  http://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/index.html
-[7]:  http://symfony.com/doc/current/book/doctrine.html
-[8]:  http://symfony.com/doc/current/book/templating.html
-[9]:  http://symfony.com/doc/current/book/security.html
-[10]: http://symfony.com/doc/current/cookbook/email.html
-[11]: http://symfony.com/doc/current/cookbook/logging/monolog.html
-[12]: http://symfony.com/doc/current/cookbook/assetic/asset_management.html
-[13]: http://symfony.com/doc/current/bundles/SensioGeneratorBundle/index.html
+[1]:  https://symfony.com/doc/current/book/installation.html
+[6]:  https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/index.html
+[7]:  https://symfony.com/doc/current/book/doctrine.html
+[8]:  https://symfony.com/doc/current/book/templating.html
+[9]:  https://symfony.com/doc/current/book/security.html
+[10]: https://symfony.com/doc/current/cookbook/email.html
+[11]: https://symfony.com/doc/current/cookbook/logging/monolog.html
+[12]: https://symfony.com/doc/current/cookbook/assetic/asset_management.html
+[13]: https://symfony.com/doc/current/bundles/SensioGeneratorBundle/index.html
 [14]: http://jmsyst.com/bundles/JMSDiExtraBundle
 [15]: http://jmsyst.com/bundles/JMSSecurityExtraBundle
 [16]: http://docs.doctrine-project.org/projects/doctrine-mongodb-odm/en/latest/
