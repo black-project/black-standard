@@ -1,6 +1,37 @@
 default:
+
+    autoload:
+        "":  %paths.base%/features/bootstrap
+
+    suites:
+        default:
+            contexts:
+                - FeatureContext
+            filters: { tags: "@ui" }
+
     extensions:
-        Behat\Symfony2Extension\Extension:
-            mink_driver: true
-        Behat\MinkExtension\Extension:
-            default_session: 'symfony2'
+        Behat\MinkExtension:
+            base_url:  'http://www.standard.blackroom'
+            sessions:
+                default:
+                    symfony2: ~
+                javascript:
+                    selenium2: ~
+
+        Knp\FriendlyContexts\Extension: ~
+        Behat\Symfony2Extension: ~
+
+domain:
+
+    autoload:
+        "":  %paths.base%/features/bootstrap
+
+    suites:
+        default:
+            contexts:
+                - DomainContext
+            filters: { tags: "@domain" }
+
+    extensions:
+        RMiller\BehatSpec\BehatExtension:
+            path: bin/phpspec

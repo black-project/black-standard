@@ -28,8 +28,4 @@ parameters:
     monolog_to_email:       ~
     monolog_subject:        ~
 
-    mongo_host:             localhost
-    mongo_port:             27017
-    mongo_name:             ~
-
     locale:                 en
