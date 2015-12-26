@@ -9,18 +9,6 @@ default:
                 - FeatureContext
             filters: { tags: "@ui" }
 
-    extensions:
-        Behat\MinkExtension:
-            base_url:  'http://www.standard.blackroom'
-            sessions:
-                default:
-                    symfony2: ~
-                javascript:
-                    selenium2: ~
-
-        Knp\FriendlyContexts\Extension: ~
-        Behat\Symfony2Extension: ~
-
 domain:
 
     autoload:
