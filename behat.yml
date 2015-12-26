@@ -11,7 +11,7 @@ default:
 
     extensions:
         Behat\MinkExtension:
-            base_url:  'http://www.standard.blackroom'
+            base_url:  'http://www.example.com'
             sessions:
                 default:
                     symfony2: ~
