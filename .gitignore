@@ -5,6 +5,8 @@
 /var/logs/*
 !var/cache/.gitkeep
 !var/logs/.gitkeep
+/var/sessions/*
+!var/sessions/.gitkeep
 /build/
 /vendor/
 /bin/*
