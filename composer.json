@@ -12,7 +12,7 @@
     },
     "require": {
         "php": ">=5.5.9",
-        "symfony/symfony": "3.0.*",
+        "symfony/symfony": "^2.8",
         "doctrine/orm": "^2.5",
         "doctrine/doctrine-bundle": "^1.6",
         "doctrine/doctrine-cache-bundle": "^1.2",
@@ -23,17 +23,26 @@
         "incenteev/composer-parameter-handler": "^2.0",
         "roave/security-advisories": "dev-master",
         "cocur/slugify": "^1.2",
-        "ramsey/uuid": "^3.1"
+        "ramsey/uuid": "^2.8",
+        "puli/symfony-bundle": "dev-master",
+        "symfony/psr-http-message-bridge": "^0.2.0",
+        "zendframework/zend-diactoros": "^1.3"
     },
     "require-dev": {
         "hautelook/alice-bundle": "dev-master",
-        "behat/behat": "dev-master",
+        "behat/behat": "~3.0",
+        "knplabs/friendly-contexts": "~0.5",
+        "behat/symfony2-extension": "~2.0",
+        "behat/mink-browserkit-driver": "~1.3",
+        "behat/mink-selenium2-driver": "~1.2",
         "phpspec/phpspec": "^2.4",
         "memio/spec-gen": "^0.4",
         "symfony/phpunit-bridge": "^2.7",
         "phpunit/phpunit": "~5.0",
         "rmiller/behat-spec": "^0.2.0",
-        "braincrafted/testing-bundle": "^0.4.1"
+        "braincrafted/testing-bundle": "^0.4.1",
+        "mikey179/vfsStream": "^1.6",
+        "puli/cli": "^1.0"
     },
     "suggest": {
         "twig/extensions": "If you want useful extensions for Twig",
@@ -74,7 +83,8 @@
             "file": "app/config/parameters.yml"
         },
         "branch-alias": {
-            "dev-master": "3.0-dev"
+            "dev-master": "2.8-dev"
         }
-    }
+    },
+    "minimum-stability": "beta"
 }
