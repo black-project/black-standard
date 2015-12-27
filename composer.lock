@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "4712a01f5641e139a39cc207205bebd2",
-    "content-hash": "1747cb80ad4fc7fbaee0ad57e1fe362c",
+    "hash": "92a0e3455106da8982ac9159484db47e",
+    "content-hash": "9d5d21008fab11bc3b4be03f293a2b3d",
     "packages": [
         {
             "name": "cocur/slugify",
@@ -1408,16 +1408,16 @@
         },
         {
             "name": "puli/symfony-bundle",
-            "version": "dev-master",
+            "version": "1.0.0-beta9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/puli/symfony-bundle.git",
-                "reference": "2abfadb29bd7ee727465520d59363379ad0157e9"
+                "reference": "58613b5b8a305a431d67bb79dd9e80076d7d8bb9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/puli/symfony-bundle/zipball/2abfadb29bd7ee727465520d59363379ad0157e9",
-                "reference": "2abfadb29bd7ee727465520d59363379ad0157e9",
+                "url": "https://api.github.com/repos/puli/symfony-bundle/zipball/58613b5b8a305a431d67bb79dd9e80076d7d8bb9",
+                "reference": "58613b5b8a305a431d67bb79dd9e80076d7d8bb9",
                 "shasum": ""
             },
             "require": {
@@ -1460,7 +1460,7 @@
             ],
             "description": "Integrates the Puli library into the Symfony2 full-stack framework.",
             "homepage": "http://puli.io",
-            "time": "2015-12-10 11:22:23"
+            "time": "2015-10-05 12:18:37"
         },
         {
             "name": "puli/url-generator",
@@ -6289,7 +6289,6 @@
     "minimum-stability": "beta",
     "stability-flags": {
         "roave/security-advisories": 20,
-        "puli/symfony-bundle": 20,
         "hautelook/alice-bundle": 20
     },
     "prefer-stable": false,

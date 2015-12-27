@@ -2,10 +2,20 @@
     "version": "1.0",
     "name": "black-project/black-standard-edition",
     "path-mappings": {
-        "/app": "app/Resources/"
+        "/app": "app/Resources/",
+        "/app/config": "app/config",
+        "/var": "var"
     },
     "config": {
         "bootstrap-file": "vendor/autoload.php"
+    },
+    "extra": {
+        "servers": {
+            "localhost": {
+                "installer": "symlink",
+                "document-root": "web"
+            }
+        }
     },
     "packages": {
         "behat/behat": {
