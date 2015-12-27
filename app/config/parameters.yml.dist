@@ -20,7 +20,6 @@ parameters:
 
     debug_toolbar:          true
     debug_redirects:        false
-    use_assetic_controller: true
 
     delivery_email:         ~
     monolog_from_email:     ~
