@@ -4,11 +4,11 @@
     "type": "project",
     "description": "The \"Black Edition\" distribution build on top of \"Symfony Standard Edition\"",
     "autoload": {
-        "psr-4": { "": "src/" },
+        "psr-4": { "App\\": "app/src/" },
         "classmap": [ "app/AppKernel.php", "app/AppCache.php" ]
     },
     "autoload-dev": {
-        "psr-4": { "Tests\\": "tests/" }
+        "psr-4": { "Tests\\": "app/tests/" }
     },
     "require": {
         "php": ">=5.5.9",
@@ -52,6 +52,7 @@
         "helios-ag/fm-elfinder-bundle": "Rich file manager"
     },
     "minimum-stability": "beta",
+    "prefer-stable": true,
     "scripts": {
         "post-install-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
@@ -70,18 +71,15 @@
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget"
         ]
     },
-    "config": {
-        "bin-dir": "bin"
-    },
     "extra": {
         "symfony-app-dir": "app",
         "symfony-bin-dir": "bin",
         "symfony-var-dir": "var",
         "symfony-web-dir": "web",
-        "symfony-tests-dir": "tests",
+        "symfony-tests-dir": "src/tests",
         "symfony-assets-install": "relative",
         "incenteev-parameters": {
-            "file": "app/config/parameters.yml"
+            "file": "app/res/config/parameters.yml"
         },
         "branch-alias": {
             "dev-master": "2.8-dev"

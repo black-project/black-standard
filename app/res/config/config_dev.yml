@@ -46,3 +46,6 @@ monolog:
 
 swiftmailer:
     delivery_address: %delivery_email%
+    #delivery_whitlist:
+    #   - "notifications@example.com$/"
+    #   - "/admin@*$/"

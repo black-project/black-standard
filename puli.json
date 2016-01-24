@@ -1,10 +1,8 @@
 {
-    "version": "1.0",
+    "version": "4.0",
     "name": "black-project/black-standard-edition",
     "path-mappings": {
-        "/app": "app/Resources/",
-        "/app/config": "app/config",
-        "/var": "var"
+        "/app": "app/res"
     },
     "config": {
         "bootstrap-file": "vendor/autoload.php"
@@ -155,8 +153,7 @@
         },
         "justinrainbow/json-schema": {
             "install-path": "vendor/justinrainbow/json-schema",
-            "installer": "composer",
-            "env": "dev"
+            "installer": "composer"
         },
         "knplabs/friendly-contexts": {
             "install-path": "vendor/knplabs/friendly-contexts",
@@ -404,8 +401,7 @@
         },
         "seld/jsonlint": {
             "install-path": "vendor/seld/jsonlint",
-            "installer": "composer",
-            "env": "dev"
+            "installer": "composer"
         },
         "sensio/distribution-bundle": {
             "install-path": "vendor/sensio/distribution-bundle",
@@ -499,11 +495,6 @@
         },
         "webmozart/json": {
             "install-path": "vendor/webmozart/json",
-            "installer": "composer",
-            "env": "dev"
-        },
-        "webmozart/key-value-store": {
-            "install-path": "vendor/webmozart/key-value-store",
             "installer": "composer"
         },
         "webmozart/path-util": {

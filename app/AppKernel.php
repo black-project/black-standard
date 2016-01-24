@@ -22,7 +22,6 @@ class AppKernel extends Kernel
             $bundles[] = new Symfony\Bundle\DebugBundle\DebugBundle();
             $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
             $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
-            $bundles[] = new Braincrafted\Bundle\TestingBundle\BraincraftedTestingBundle($this);
             $bundles[] = new Hautelook\AliceBundle\HautelookAliceBundle();
         }
 
@@ -31,12 +30,12 @@ class AppKernel extends Kernel
 
     public function getRootDir()
     {
-        return __DIR__;
+        return __DIR__ . '/res';
     }
 
     public function getCacheDir()
     {
-        return dirname(__DIR__) . '/var/cache/'.$this->getEnvironment();
+        return dirname(__DIR__) . '/var/cache/' . $this->getEnvironment();
     }
 
     public function getLogDir()
@@ -46,6 +45,6 @@ class AppKernel extends Kernel
 
     public function registerContainerConfiguration(LoaderInterface $loader)
     {
-        $loader->load($this->getRootDir().'/config/config_' . $this->getEnvironment() . '.yml');
+        $loader->load($this->getRootDir() . '/config/config_' . $this->getEnvironment() . '.yml');
     }
 }
