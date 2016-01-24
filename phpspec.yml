@@ -1,3 +1,9 @@
 extensions:
   - Memio\SpecGen\MemioSpecGenExtension
   - RMiller\BehatSpec\PhpSpecExtension
+
+suites:
+    app_suite:
+        namespace: App
+        src_path: %paths.config%/app/src
+        spec_path: %paths.config/app

@@ -1,7 +1,7 @@
 imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
-    - { resource: services.yml }
+    - { resource: services/default.yml }
 
 framework:
     esi:             { enabled: true }
@@ -12,7 +12,7 @@ framework:
         strict_requirements: ~
     form:            ~
     csrf_protection: ~
-    validation:      { enable_annotations: true }
+    #validation:      { enable_annotations: true }
     #serializer:      { enable_annotations: true }
     templating:
         engines: ['twig']
@@ -50,11 +50,22 @@ doctrine:
         #   2. Uncomment database_path in parameters.yml.dist
         #   3. Uncomment next line:
         #     path:     "%database_path%"
+        default_table_options:
+            charset: utf8mb4
+            collate: utf8mb4_unicode_ci
+            engine: InnoDB
 
     orm:
         auto_generate_proxy_classes: "%kernel.debug%"
         naming_strategy: doctrine.orm.naming_strategy.underscore
         auto_mapping: true
+        mappings:
+            entity:
+                type: yml
+                dir: "%kernel.root_dir%/config/doctrine/entity"
+                prefix: App\Entity
+                alias: Entity
+                is_bundle: false
 
 # Swiftmailer Configuration
 swiftmailer:
