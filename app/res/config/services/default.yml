@@ -6,4 +6,4 @@ parameters:
 services:
     app.controller.default:
         class: "%app.controller.default.class%"
-        arguments: ["@templating", "%kernel.root_dir%"]
+        arguments: ["@templating"]
