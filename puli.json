@@ -115,6 +115,10 @@
             "install-path": "vendor/doctrine/orm",
             "installer": "composer"
         },
+        "dunglas/action-bundle": {
+            "install-path": "vendor/dunglas/action-bundle",
+            "installer": "composer"
+        },
         "fzaninotto/faker": {
             "install-path": "vendor/fzaninotto/faker",
             "installer": "composer",

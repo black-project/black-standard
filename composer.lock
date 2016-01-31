@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "69abdfed77b858b6d4321bef6d328da1",
-    "content-hash": "9e832684fca96ae218b3d83da4e4bce9",
+    "hash": "f6bb866420b8b6ec23bc224a993d1181",
+    "content-hash": "509d43a34e933b8b00654eee0acf147f",
     "packages": [
         {
             "name": "cocur/slugify",
@@ -834,6 +834,66 @@
                 "orm"
             ],
             "time": "2016-01-05 21:34:58"
+        },
+        {
+            "name": "dunglas/action-bundle",
+            "version": "v0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dunglas/DunglasActionBundle.git",
+                "reference": "0573b2f8ff527892f73bd0fe87ff9f8c813fb66a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dunglas/DunglasActionBundle/zipball/0573b2f8ff527892f73bd0fe87ff9f8c813fb66a",
+                "reference": "0573b2f8ff527892f73bd0fe87ff9f8c813fb66a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6",
+                "symfony/config": "~2.8|~3.0",
+                "symfony/dependency-injection": "~2.8|~3.0",
+                "symfony/http-kernel": "~2.8|~3.0"
+            },
+            "require-dev": {
+                "sensio/framework-extra-bundle": "~3.0",
+                "symfony/browser-kit": "~2.8|~3.0",
+                "symfony/expression-language": "~2.8|~3.0",
+                "symfony/framework-bundle": "~2.8|~3.0"
+            },
+            "suggest": {
+                "symfony/routing": "To use the @Route annotation provided by the bundle."
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-4": {
+                    "Dunglas\\ActionBundle\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kévin Dunglas",
+                    "email": "dunglas@gmail.com",
+                    "homepage": "https://dunglas.fr"
+                }
+            ],
+            "description": "Symfony controllers, redesigned",
+            "homepage": "https://dunglas.fr/2016/01/dunglasactionbundle-symfony-controllers-redesigned/",
+            "keywords": [
+                "Autowiring",
+                "action",
+                "controllers",
+                "routing",
+                "symfony"
+            ],
+            "time": "2016-01-29 08:39:25"
         },
         {
             "name": "incenteev/composer-parameter-handler",

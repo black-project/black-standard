@@ -1,10 +1,10 @@
 <?php
 
-namespace Tests\Controller;
+namespace Tests\Action;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
-class DefaultControllerTest extends WebTestCase
+class IndexTest extends WebTestCase
 {
     public function testIndex()
     {

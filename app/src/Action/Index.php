@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller;
+namespace App\Action;
 
 use Psr\Http\Message\ServerRequestInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -9,10 +9,8 @@ use Zend\Diactoros\Response\HtmlResponse;
 
 /**
  * Class DefaultController
- *
- * @Route(service="app.controller.default")
  */
-class DefaultController
+class Index
 {
     /**
      * @var TwigEngine
@@ -35,7 +33,7 @@ class DefaultController
      * @param ServerRequestInterface $request
      * @return HtmlResponse
      */
-    public function indexAction(ServerRequestInterface $request)
+    public function __invoke(ServerRequestInterface $request)
     {
         // replace this example code with whatever you need
         return new HtmlResponse(
