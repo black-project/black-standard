@@ -3,11 +3,14 @@
 namespace App\Controller;
 
 use Psr\Http\Message\ServerRequestInterface;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bridge\Twig\TwigEngine;
 use Zend\Diactoros\Response\HtmlResponse;
 
 /**
  * Class DefaultController
+ *
+ * @Route(service="app.controller.default")
  */
 class DefaultController
 {
@@ -17,34 +20,27 @@ class DefaultController
     protected $templating;
 
     /**
-     * @var
-     */
-    protected $rootDir;
-
-    /**
      * DefaultController constructor.
      *
      * @param TwigEngine $templating
-     * @param $rootDir
      */
-    public function __construct(
-        TwigEngine $templating,
-        $rootDir
-    ) {
+    public function __construct(TwigEngine $templating)
+    {
         $this->templating = $templating;
-        $this->rootDir = $rootDir;
     }
 
     /**
+     * @Route("/", name="homepage")
+     *
      * @param ServerRequestInterface $request
      * @return HtmlResponse
      */
-    public function __invoke(ServerRequestInterface $request)
+    public function indexAction(ServerRequestInterface $request)
     {
         // replace this example code with whatever you need
         return new HtmlResponse(
             $this->templating->render('/app/views/default/index.html.twig', [
-                'base_dir' => realpath($this->rootDir . '/..'),
+                'base_dir' => '/app',
             ])
         );
     }

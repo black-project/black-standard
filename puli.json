@@ -1,8 +1,9 @@
 {
-    "version": "4.0",
+    "version": "1.0",
     "name": "black-project/black-standard-edition",
     "path-mappings": {
-        "/app": "app/res"
+        "/app": "app/res",
+        "/app/src": "app/src"
     },
     "config": {
         "bootstrap-file": "vendor/autoload.php"
