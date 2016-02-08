@@ -1,3 +1,4 @@
 app_default:
-    resource: "/app/src/Controller"
-    type: annotation
+    path: "/"
+    defaults: { _controller: app.controller.default }
+    methods: [GET]

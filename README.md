@@ -3,7 +3,8 @@ Black Standard Edition
 
 This package is a custom Symfony Edition for black projects.
 
-__CAUTION__ The Black Standard Edition don't follow Semantic Versioning of Symfony Standard Edition since v2.5.1
+__CAUTION__ The Black Standard Edition don't follow Semantic Versioning 
+of Symfony Standard Edition since v2.5.1
 
 Black Standard Edition
 ========================
@@ -17,7 +18,8 @@ For details on how to download and get started with Symfony, see the
 Parameters
 -------------
 
-For better configuration, we have added some parameters for Monolog and default delivery email configuration in your `parameters.yml.dist`.
+For better configuration, we have added some parameters for Monolog and default 
+delivery email configuration in your `parameters.yml.dist`.
 
 Testing Tools
 ----------------
@@ -31,6 +33,11 @@ We use Symfony 3.0 directory structure since v2.5.1.
 See [What is the new Symfony3 directory structure?][25] for more details.
 
 Black Standard Edition use [Puli][2] as resource locator.
+
+### Directory Structure
+
+As you can see, there is no `src` root folder and all your code will be in `app/src`.
+This is because we are not using the directory structure of Symfony Standard Edition.
 
 What's inside?
 ---------------

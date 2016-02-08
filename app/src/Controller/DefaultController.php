@@ -3,14 +3,11 @@
 namespace App\Controller;
 
 use Psr\Http\Message\ServerRequestInterface;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bridge\Twig\TwigEngine;
 use Zend\Diactoros\Response\HtmlResponse;
 
 /**
  * Class DefaultController
- *
- * @Route(service="app.controller.default")
  */
 class DefaultController
 {
@@ -30,12 +27,10 @@ class DefaultController
     }
 
     /**
-     * @Route("/", name="homepage")
-     *
      * @param ServerRequestInterface $request
      * @return HtmlResponse
      */
-    public function indexAction(ServerRequestInterface $request)
+    public function __invoke(ServerRequestInterface $request)
     {
         // replace this example code with whatever you need
         return new HtmlResponse(
