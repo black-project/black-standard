@@ -2,18 +2,11 @@
     "version": "1.0",
     "name": "black-project/black-standard-edition",
     "path-mappings": {
-        "/app": "app/res"
+        "/app": "app/res/views",
+        "/app/config": "app/res/config"
     },
     "config": {
         "bootstrap-file": "vendor/autoload.php"
-    },
-    "extra": {
-        "servers": {
-            "localhost": {
-                "installer": "symlink",
-                "document-root": "web"
-            }
-        }
     },
     "packages": {
         "behat/behat": {
@@ -38,11 +31,6 @@
         },
         "behat/mink-extension": {
             "install-path": "vendor/behat/mink-extension",
-            "installer": "composer",
-            "env": "dev"
-        },
-        "behat/mink-selenium2-driver": {
-            "install-path": "vendor/behat/mink-selenium2-driver",
             "installer": "composer",
             "env": "dev"
         },
@@ -136,15 +124,6 @@
         },
         "incenteev/composer-parameter-handler": {
             "install-path": "vendor/incenteev/composer-parameter-handler",
-            "installer": "composer"
-        },
-        "instaclick/php-webdriver": {
-            "install-path": "vendor/instaclick/php-webdriver",
-            "installer": "composer",
-            "env": "dev"
-        },
-        "ircmaxell/password-compat": {
-            "install-path": "vendor/ircmaxell/password-compat",
             "installer": "composer"
         },
         "jdorn/sql-formatter": {
@@ -321,6 +300,10 @@
             "install-path": "vendor/puli/symfony-bundle",
             "installer": "composer"
         },
+        "puli/twig-extension": {
+            "install-path": "vendor/puli/twig-extension",
+            "installer": "composer"
+        },
         "puli/url-generator": {
             "install-path": "vendor/puli/url-generator",
             "installer": "composer"
@@ -356,6 +339,11 @@
         },
         "rmiller/phpspec-run-extension": {
             "install-path": "vendor/rmiller/phpspec-run-extension",
+            "installer": "composer",
+            "env": "dev"
+        },
+        "sebastian/code-unit-reverse-lookup": {
+            "install-path": "vendor/sebastian/code-unit-reverse-lookup",
             "installer": "composer",
             "env": "dev"
         },
@@ -436,14 +424,6 @@
             "install-path": "vendor/symfony/polyfill-mbstring",
             "installer": "composer"
         },
-        "symfony/polyfill-php54": {
-            "install-path": "vendor/symfony/polyfill-php54",
-            "installer": "composer"
-        },
-        "symfony/polyfill-php55": {
-            "install-path": "vendor/symfony/polyfill-php55",
-            "installer": "composer"
-        },
         "symfony/polyfill-php56": {
             "install-path": "vendor/symfony/polyfill-php56",
             "installer": "composer"
@@ -458,10 +438,6 @@
         },
         "symfony/psr-http-message-bridge": {
             "install-path": "vendor/symfony/psr-http-message-bridge",
-            "installer": "composer"
-        },
-        "symfony/security-acl": {
-            "install-path": "vendor/symfony/security-acl",
             "installer": "composer"
         },
         "symfony/swiftmailer-bundle": {

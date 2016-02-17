@@ -34,7 +34,7 @@ class DefaultController
     {
         // replace this example code with whatever you need
         return new HtmlResponse(
-            $this->templating->render('/app/views/default/index.html.twig', [
+            $this->templating->render('/app/default/index.html.twig', [
                 'base_dir' => '/app',
             ])
         );
