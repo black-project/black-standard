@@ -12,14 +12,12 @@ Black Standard Edition
 Welcome to the Black Standard Edition - a fully-functional Symfony2
 application that you can use as the skeleton for your new applications.
 
-For details on how to download and get started with Symfony, see the
-[Installation][1] chapter of the Symfony Documentation.
+Installation
+---------------
 
-Parameters
--------------
-
-For better configuration, we have added some parameters for Monolog and default 
-delivery email configuration in your `parameters.yml.dist`.
+```
+$ composer create-project black-project/black-standard-edition my_project_name
+```
 
 Testing Tools
 ----------------
@@ -28,9 +26,6 @@ Testing Tools
 
 OH WAIT
 ----------
-
-We use Symfony 3.0 directory structure since v2.5.1. 
-See [What is the new Symfony3 directory structure?][25] for more details.
 
 Black Standard Edition use [Puli][2] as resource locator.
 
@@ -77,9 +72,12 @@ It comes pre-configured with the following bundles:
   * **SensioDistributionBundle** (in dev/test env) - Adds functionality for
     configuring and working with Symfony distributions
     
-  * [**PuliSymfonyBundle**][12] — a universal package system for PHP. Puli aims 
+  * [**PuliSymfonyBundle**][12] — an universal package system for PHP. Puli aims 
     to replace “bundles”, “plugins”, “modules” and similar specialized packages of
     different frameworks with one generic, framework independent solution.
+    
+  * [**AliceBundle**][13] - A Symfony bundle to manage fixtures with nelmio/alice 
+    and fzaninotto/Faker.
 
 All libraries and bundles included in the Black Standard Edition are
 released under the MIT or BSD license.
@@ -87,7 +85,7 @@ released under the MIT or BSD license.
 Enjoy!
 
 [1]:  https://symfony.com/doc/current/book/installation.html
-[2]: http://docs.puli.io/en/latest/repository/introduction.html
+[2]:  http://docs.puli.io/en/latest/repository/introduction.html
 [6]:  https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/index.html
 [7]:  https://symfony.com/doc/current/book/doctrine.html
 [8]:  https://symfony.com/doc/current/book/templating.html
@@ -95,6 +93,6 @@ Enjoy!
 [10]: https://symfony.com/doc/current/cookbook/email.html
 [11]: https://symfony.com/doc/current/cookbook/logging/monolog.html
 [12]: http://docs.puli.io/en/latest/extensions/symfony-bundle.html
+[13]: https://github.com/hautelook/AliceBundle#alicebundle
 [22]: http://behat.org/
 [24]: http://phpspec.net/
-[25]: http://stackoverflow.com/questions/23993295/what-is-the-new-symfony-3-directory-structure
