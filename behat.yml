@@ -1,17 +1,19 @@
 default:
 
     autoload:
-        "":  %paths.base%/features/bootstrap
+        "":  %paths.base%/app/features/bootstrap
 
     suites:
         default:
+            paths:
+                - %paths.base%/app/features
             contexts:
                 - FeatureContext
             filters: { tags: "@ui" }
 
     extensions:
         Behat\MinkExtension:
-            base_url:  'http://www.standard.blackroom'
+            base_url:  'http://www.example.com'
             sessions:
                 default:
                     symfony2: ~
@@ -24,14 +26,16 @@ default:
 domain:
 
     autoload:
-        "":  %paths.base%/features/bootstrap
+        "":  %paths.base%/app/features/bootstrap
 
     suites:
         default:
+            paths:
+                - %paths.base%/app/features
             contexts:
                 - DomainContext
             filters: { tags: "@domain" }
 
     extensions:
         RMiller\BehatSpec\BehatExtension:
-            path: bin/phpspec
+            path: vendor/bin/phpspec

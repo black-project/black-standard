@@ -3,7 +3,7 @@
 /**
  * Defines application features from the specific context.
  */
-class FeatureContext extends \Behat\MinkExtension\Context\MinkContext implements Behat\Symfony2Extension\Context\KernelAwareContext
+class FeatureContext implements \Behat\Behat\Context\Context
 {
     protected $kernel;
 

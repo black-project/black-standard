@@ -3,7 +3,7 @@ imports:
 
 framework:
     router:
-        resource: "%kernel.root_dir%/config/routing_dev.yml"
+        resource: "/app/config/routing_dev.yml"
         strict_requirements: true
     profiler: { only_exceptions: false }
     translator:
@@ -19,13 +19,14 @@ monolog:
             type:   stream
             path:   "%kernel.logs_dir%/%kernel.environment%.log"
             level:  debug
+            channels: [!event]
         console:
             type:   console
             bubble: false
             verbosity_levels:
                 VERBOSITY_VERBOSE: INFO
                 VERBOSITY_VERY_VERBOSE: DEBUG
-            channels: ["!doctrine"]
+            channels: [!event, !doctrine]
         console_very_verbose:
             type:   console
             bubble: false
@@ -33,7 +34,7 @@ monolog:
                 VERBOSITY_VERBOSE: NOTICE
                 VERBOSITY_VERY_VERBOSE: NOTICE
                 VERBOSITY_DEBUG: DEBUG
-            channels: ["doctrine"]
+            channels: [!event, !doctrine]
         # uncomment to get logging in your browser
         # you may have to allow bigger header sizes in your Web server configuration
         #firephp:
@@ -45,3 +46,6 @@ monolog:
 
 swiftmailer:
     delivery_address: %delivery_email%
+    #delivery_whitlist:
+    #   - "notifications@example.com$/"
+    #   - "/admin@*$/"

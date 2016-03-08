@@ -5,9 +5,12 @@
 /var/logs/*
 !var/cache/.gitkeep
 !var/logs/.gitkeep
+/var/sessions/*
+!var/sessions/.gitkeep
 /build/
 /vendor/
 /bin/*
 !bin/console
 !bin/symfony_requirements
 /composer.phar
+/.puli
