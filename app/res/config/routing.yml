@@ -1,4 +1,0 @@
-app_default:
-    path: "/"
-    defaults: { _controller: app.controller.default }
-    methods: [GET]
