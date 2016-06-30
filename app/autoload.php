@@ -8,6 +8,10 @@ use Composer\Autoload\ClassLoader;
  */
 $loader = require __DIR__.'/../vendor/autoload.php';
 
+$loader->addClassMap([
+    'Puli\\GeneratedPuliFactory' => __DIR__.'/../.puli/GeneratedPuliFactory.php',
+]);
+
 AnnotationRegistry::registerLoader([$loader, 'loadClass']);
 
 return $loader;
