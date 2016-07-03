@@ -35,6 +35,7 @@
         "knplabs/friendly-contexts": "~0.7",
         "behat/symfony2-extension": "~2.1",
         "behat/mink-browserkit-driver": "~1.3",
+        "behat/mink-selenium2-driver": "~1.3",
         "behat/mink": "~1.7",
         "phpspec/phpspec": "^2.4",
         "memio/spec-gen": "^0.4",
