@@ -1,5 +1,5 @@
 permissions:
-	sudo rm -Rf var/cache var/logs
+	sudo rm -Rf var/cache/* var/logs/*
 	sudo setfacl -R -m u:"www-data":rwX -m u:`whoami`:rwX var/cache var/logs
 	sudo setfacl -dR -m u:"www-data":rwX -m u:`whoami`:rwX var/cache var/logs
 
