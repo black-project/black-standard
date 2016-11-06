@@ -25,7 +25,7 @@
         "roave/security-advisories": "dev-master",
         "ramsey/uuid": "^2.8",
         "puli/symfony-bundle": "^1.0",
-        "puli/twig-extension": "^1.0",
+        "puli/twig-extension": "dev-master",
         "symfony/psr-http-message-bridge": "^0.2",
         "zendframework/zend-diactoros": "^1.3"
     },
