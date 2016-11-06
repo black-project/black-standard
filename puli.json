@@ -34,6 +34,11 @@
             "installer": "composer",
             "env": "dev"
         },
+        "behat/mink-selenium2-driver": {
+            "install-path": "vendor/behat/mink-selenium2-driver",
+            "installer": "composer",
+            "env": "dev"
+        },
         "behat/symfony2-extension": {
             "install-path": "vendor/behat/symfony2-extension",
             "installer": "composer",
@@ -48,10 +53,6 @@
             "install-path": "vendor/braincrafted/testing-bundle/Braincrafted/Bundle/TestingBundle",
             "installer": "composer",
             "env": "dev"
-        },
-        "cocur/slugify": {
-            "install-path": "vendor/cocur/slugify",
-            "installer": "composer"
         },
         "doctrine/annotations": {
             "install-path": "vendor/doctrine/annotations",
@@ -126,6 +127,11 @@
             "install-path": "vendor/incenteev/composer-parameter-handler",
             "installer": "composer"
         },
+        "instaclick/php-webdriver": {
+            "install-path": "vendor/instaclick/php-webdriver",
+            "installer": "composer",
+            "env": "dev"
+        },
         "jdorn/sql-formatter": {
             "install-path": "vendor/jdorn/sql-formatter",
             "installer": "composer"
@@ -174,11 +180,6 @@
             "installer": "composer",
             "env": "dev"
         },
-        "mikey179/vfsstream": {
-            "install-path": "vendor/mikey179/vfsStream",
-            "installer": "composer",
-            "env": "dev"
-        },
         "monolog/monolog": {
             "install-path": "vendor/monolog/monolog",
             "installer": "composer"
@@ -207,8 +208,18 @@
             "install-path": "vendor/paragonie/random_compat",
             "installer": "composer"
         },
+        "phpdocumentor/reflection-common": {
+            "install-path": "vendor/phpdocumentor/reflection-common",
+            "installer": "composer",
+            "env": "dev"
+        },
         "phpdocumentor/reflection-docblock": {
             "install-path": "vendor/phpdocumentor/reflection-docblock",
+            "installer": "composer",
+            "env": "dev"
+        },
+        "phpdocumentor/type-resolver": {
+            "install-path": "vendor/phpdocumentor/type-resolver",
             "installer": "composer",
             "env": "dev"
         },
@@ -261,6 +272,10 @@
             "install-path": "vendor/phpunit/phpunit-mock-objects",
             "installer": "composer",
             "env": "dev"
+        },
+        "psr/cache": {
+            "install-path": "vendor/psr/cache",
+            "installer": "composer"
         },
         "psr/http-message": {
             "install-path": "vendor/psr/http-message",
@@ -372,6 +387,11 @@
             "installer": "composer",
             "env": "dev"
         },
+        "sebastian/object-enumerator": {
+            "install-path": "vendor/sebastian/object-enumerator",
+            "installer": "composer",
+            "env": "dev"
+        },
         "sebastian/recursion-context": {
             "install-path": "vendor/sebastian/recursion-context",
             "installer": "composer",
@@ -415,6 +435,10 @@
             "install-path": "vendor/symfony/phpunit-bridge",
             "installer": "composer",
             "env": "dev"
+        },
+        "symfony/polyfill-apcu": {
+            "install-path": "vendor/symfony/polyfill-apcu",
+            "installer": "composer"
         },
         "symfony/polyfill-intl-icu": {
             "install-path": "vendor/symfony/polyfill-intl-icu",
