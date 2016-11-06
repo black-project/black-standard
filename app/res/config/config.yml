@@ -13,7 +13,7 @@ framework:
     translator:
         fallback: ["%locale%"]
         paths:
-            - '%kernel.root_dir%/translations'
+            - '%kernel.root_dir%/res/translations'
     secret:          "%secret%"
     router:
         resource: "/app/config/routing.yml"
@@ -70,7 +70,7 @@ doctrine:
         mappings:
             entity:
                 type: yml
-                dir: "%kernel.root_dir%/config/doctrine/entity"
+                dir: "%kernel.root_dir%/res/config/doctrine/entity"
                 prefix: App\Entity
                 alias: Entity
                 is_bundle: false

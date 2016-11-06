@@ -15,6 +15,3 @@ permissions:
 
 cache:
 	bin/console cache:clear
-
-run:
-	bin/console server:run --docroot=./web
