@@ -1,16 +1,11 @@
 Black Standard Edition
-======================
-
-This package is a custom Symfony Edition for black projects.
-
-__CAUTION__ The Black Standard Edition don't follow Semantic Versioning 
-of Symfony Standard Edition since v2.5.1
-
-Black Standard Edition
 ========================
 
 Welcome to the Black Standard Edition - a fully-functional Symfony2
 application that you can use as the skeleton for your new applications.
+
+__CAUTION__ The Black Standard Edition don't follow Semantic Versioning 
+of Symfony Standard Edition since v2.5.1
 
 Installation
 ---------------
@@ -35,17 +30,19 @@ As you can see, there is no `src` root folder and all your code will be in `app/
 This is because we are not using the directory structure of Symfony Standard Edition.
 
 What's inside?
----------------
+--------------
 
 The Black Standard Edition is configured with the following defaults:
 
-  * Twig is the only configured template engine;
+  * An AppBundle you can use to start coding;
 
-  * Doctrine ORM/DBAL is configured;
+  * Twig as the only configured template engine;
+
+  * Doctrine ORM/DBAL;
 
   * Swiftmailer;
 
-  * Annotations enabled for everything.
+  * Annotations disabled for everything.
 
 It comes pre-configured with the following bundles:
 
@@ -76,23 +73,26 @@ It comes pre-configured with the following bundles:
     to replace “bundles”, “plugins”, “modules” and similar specialized packages of
     different frameworks with one generic, framework independent solution.
     
-  * [**AliceBundle**][13] - A Symfony bundle to manage fixtures with nelmio/alice 
+  * [**AliceBundle**][14] - A Symfony bundle to manage fixtures with nelmio/alice 
     and fzaninotto/Faker.
 
-All libraries and bundles included in the Black Standard Edition are
+  * **DebugBundle** (in dev/test env) - Adds Debug and VarDumper component
+    integration
+
+All libraries and bundles included in the Symfony Standard Edition are
 released under the MIT or BSD license.
 
 Enjoy!
 
-[1]:  https://symfony.com/doc/current/book/installation.html
+[1]:  https://symfony.com/doc/3.0/book/installation.html
 [2]:  http://docs.puli.io/en/latest/repository/introduction.html
 [6]:  https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/index.html
-[7]:  https://symfony.com/doc/current/book/doctrine.html
-[8]:  https://symfony.com/doc/current/book/templating.html
-[9]:  https://symfony.com/doc/current/book/security.html
-[10]: https://symfony.com/doc/current/cookbook/email.html
-[11]: https://symfony.com/doc/current/cookbook/logging/monolog.html
+[7]:  https://symfony.com/doc/3.0/book/doctrine.html
+[8]:  https://symfony.com/doc/3.0/book/templating.html
+[9]:  https://symfony.com/doc/3.0/book/security.html
+[10]: https://symfony.com/doc/3.0/cookbook/email.html
+[11]: https://symfony.com/doc/3.0/cookbook/logging/monolog.html
 [12]: http://docs.puli.io/en/latest/extensions/symfony-bundle.html
-[13]: https://github.com/hautelook/AliceBundle#alicebundle
+[14]: https://github.com/hautelook/AliceBundle#alicebundle
 [22]: http://behat.org/
 [24]: http://phpspec.net/

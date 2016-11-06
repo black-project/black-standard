@@ -21,6 +21,11 @@
     <filter>
         <whitelist>
             <directory>app/src</directory>
+            <exclude>
+                <directory>app/src/*Bundle/Resources</directory>
+                <directory>app/src/*/*Bundle/Resources</directory>
+                <directory>app/src/*/Bundle/*Bundle/Resources</directory>
+            </exclude>
         </whitelist>
     </filter>
 </phpunit>
