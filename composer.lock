@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e973eec2b8e8ae255574210a8947cdb8",
-    "content-hash": "5e13204859a1b7c9baeccb5256bf16d3",
+    "hash": "bdd3c60ef3054d441e20b49dcc076e40",
+    "content-hash": "96a32692fb851ab779879b3b6d48330f",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -2570,16 +2570,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v3.2.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "b96a144bc875684f3338f697687147a2696d73eb"
+                "reference": "e7658492152b8f097c5bfaa9ed0facc93633a9ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/b96a144bc875684f3338f697687147a2696d73eb",
-                "reference": "b96a144bc875684f3338f697687147a2696d73eb",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/e7658492152b8f097c5bfaa9ed0facc93633a9ed",
+                "reference": "e7658492152b8f097c5bfaa9ed0facc93633a9ed",
                 "shasum": ""
             },
             "require": {
@@ -2669,7 +2669,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.2-dev"
+                    "dev-master": "3.3-dev"
                 }
             },
             "autoload": {
@@ -2708,7 +2708,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2016-11-30 08:46:24"
+            "time": "2016-11-29 13:39:51"
         },
         {
             "name": "twig/twig",
@@ -6348,6 +6348,7 @@
     "aliases": [],
     "minimum-stability": "beta",
     "stability-flags": {
+        "symfony/symfony": 20,
         "roave/security-advisories": 20,
         "puli/twig-extension": 20
     },
