@@ -84,14 +84,14 @@ released under the MIT or BSD license.
 
 Enjoy!
 
-[1]:  https://symfony.com/doc/3.0/book/installation.html
+[1]:  https://symfony.com/doc/3.2/setup.html
 [2]:  http://docs.puli.io/en/latest/repository/introduction.html
 [6]:  https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/index.html
-[7]:  https://symfony.com/doc/3.0/book/doctrine.html
-[8]:  https://symfony.com/doc/3.0/book/templating.html
-[9]:  https://symfony.com/doc/3.0/book/security.html
-[10]: https://symfony.com/doc/3.0/cookbook/email.html
-[11]: https://symfony.com/doc/3.0/cookbook/logging/monolog.html
+[7]:  https://symfony.com/doc/3.2/book/doctrine.html
+[8]:  https://symfony.com/doc/3.2/book/templating.html
+[9]:  https://symfony.com/doc/3.2/book/security.html
+[10]: https://symfony.com/doc/3.2/cookbook/email.html
+[11]: https://symfony.com/doc/3.2/cookbook/logging/monolog.html
 [12]: http://docs.puli.io/en/latest/extensions/symfony-bundle.html
 [14]: https://github.com/hautelook/AliceBundle#alicebundle
 [22]: http://behat.org/
